@@ -32,4 +32,15 @@ let getJohnOrders = () => {
   });
 };
 
-// Start coding here
+// Start coding here\
+async function display() {
+  try {
+    const profileData = await getJohnProfile();
+    console.log(profileData);
+    const ordersData = await getJohnOrders();
+    console.log(ordersData);
+  } catch (error) {
+    console.log(error);
+  }
+}
+display();
